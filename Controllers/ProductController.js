@@ -3,7 +3,7 @@ const Product = require("../Models/Product");
 
 const addProduct = async (req, res) => {
     const userId = req.locals.userId;
-
+    console.log(req.locals);
     const isValid = Joi.object({
         name: Joi.string().required(),
         category: Joi.string().required(),
